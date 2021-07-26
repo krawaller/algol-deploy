@@ -1,0 +1,1881 @@
+/***** CSS collected by the `harvestCss` command from all UI components *****/
+
+/* ------- Harvested from global.css -------- */
+
+body {
+  margin: 0;
+}
+/* ------- Harvested from typography.css -------- */
+
+.boardPageHeadline {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.boardPageCopy {
+  font-family: system-ui;
+  font-size: 11px;
+  text-align: center;
+}
+
+.boardPageCopy > p {
+  margin-bottom: 12px;
+}
+/* ------- Harvested from ActionGallery.css -------- */
+
+.actionGalleryContainer {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1500px;
+  align-items: center;
+  position: relative;
+}
+
+.actionGalleryContainer img {
+  width: 100%;
+}
+
+.actionGalleryItemBox {
+  width: 150px;
+  margin: 5px;
+  position: relative;
+}
+
+.actionGalleryItemNameBox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+.actionGalleryItemNameInner {
+  background-color: rgba(0, 0, 0, 0.45);
+  color: white;
+  padding: 0 3px;
+  border-radius: 3px;
+  text-align: center;
+  display: block;
+  max-width: 70%;
+}
+
+.actionGalleryEnding {
+  position: absolute;
+  bottom: 10px;
+  right: 70px;
+  font-size: 18px;
+  font-family: fantasy;
+}
+/* ------- Harvested from Arrow.css -------- */
+
+.arrowContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.arrowMultiContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.arrowMultiContainer .arrowContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* --------------- Arrow body --------------- */
+
+.arrowFlushTop {
+  align-items: flex-start;
+}
+
+.arrowContainer:after {
+  --corner-radius: 12px;
+  content: "";
+  display: block;
+  border-color: blue;
+  border-style: solid;
+  border-width: 0;
+}
+
+.arrowEastWest:after {
+  border-top-width: 1px;
+  justify-self: flex-end;
+  width: 100%;
+}
+
+.arrowDashed:after {
+  border-style: dashed;
+}
+.arrowDashed:before {
+  border-style: dashed;
+}
+
+.arrowNorthSouth:after {
+  border-left-width: 1px;
+  align-self: flex-end;
+  height: 100%;
+}
+
+.arrowSouthEast {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.arrowSouthEast:after {
+  height: 50%;
+  width: calc(50% - 1px);
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-top-left-radius: var(--corner-radius);
+}
+.arrowFlushTop.arrowSouthEast:after {
+  height: calc(100% - 1px);
+}
+
+.arrowSouthWest {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.arrowSouthWest:after {
+  height: 50%;
+  width: 50%;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-top-right-radius: var(--corner-radius);
+}
+.arrowFlushTop.arrowSouthWest:after {
+  height: calc(100% - 1px);
+}
+
+.arrowNorthWest {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.arrowNorthWest:after {
+  height: calc(50% - 1px);
+  width: 50%;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-bottom-right-radius: var(--corner-radius);
+}
+
+.arrowNorthEast {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.arrowNorthEast:after {
+  height: calc(50% - 1px);
+  width: calc(50% - 1px);
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-bottom-left-radius: var(--corner-radius);
+}
+
+/* --------------- Arrow head --------------- */
+
+.arrowContainer:before {
+  --arrow-size: 15px;
+  --arrow-scale: 0.4;
+  --arrow-color: blue;
+  border: var(--arrow-size) solid transparent;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.arrowHeadNorth:before {
+  top: calc(var(--arrow-size) * -1);
+  left: calc(50% - var(--arrow-size));
+  border-bottom-color: var(--arrow-color);
+  transform: scale3d(var(--arrow-scale), 1, 1);
+}
+
+.arrowHeadSouth:before {
+  bottom: calc(var(--arrow-size) * -1);
+  left: calc(50% - var(--arrow-size));
+  border-top-color: var(--arrow-color);
+  transform: scale3d(var(--arrow-scale), 1, 1);
+}
+
+.arrowHeadEast:before {
+  right: calc(var(--arrow-size) * -1);
+  top: calc(50% - var(--arrow-size));
+  border-left-color: var(--arrow-color);
+  transform: scale3d(1, var(--arrow-scale), 1);
+}
+.arrowFlushTop.arrowHeadEast:before {
+  top: calc(var(--arrow-size) * -1);
+}
+
+.arrowHeadWest:before {
+  left: calc(var(--arrow-size) * -1);
+  top: calc(50% - var(--arrow-size));
+  border-right-color: var(--arrow-color);
+  transform: scale3d(1, var(--arrow-scale), 1);
+}
+.arrowFlushTop.arrowHeadWest:before {
+  top: calc(var(--arrow-size) * -1);
+}
+
+.arrowDashed.arrowHeadNorth:before,
+.arrowDashed.arrowHeadEast:before,
+.arrowDashed.arrowHeadSouth:before,
+.arrowDashed.arrowHeadWest:before {
+  opacity: 0.5;
+}
+/* ------- Harvested from AuthGuard.css -------- */
+
+.AuthGuardForm {
+  text-align: center;
+}
+/* ------- Harvested from BattleControls.css -------- */
+
+.battleControlsContent {
+  text-align: center;
+}
+/* ------- Harvested from BattleHelp.css -------- */
+
+.battleHelpContentContainer {
+  text-align: center;
+  margin-bottom: 2em;
+}
+/* ------- Harvested from BattleHistory.css -------- */
+
+.battleHistoryContainer {
+  text-align: center;
+}
+/* ------- Harvested from Box.css -------- */
+
+.boxContainer {
+  margin-bottom: 2em;
+}
+/* ------- Harvested from Breadcrumbs.css -------- */
+
+.breadcrumbsContainer {
+  display: flex;
+  padding: 0 5px;
+  align-items: center;
+  line-height: 2em;
+}
+
+.breadcrumb {
+  font-size: 11px;
+  align-self: stretch;
+  color: black;
+}
+
+.breadcrumb > * {
+  color: black;
+}
+
+.breadcrumbClickable {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.breadcrumbDivider {
+  margin: 0 10px;
+}
+/* ------- Harvested from Button.css -------- */
+
+/* Mostly stolen from Blueprint button */
+
+.button > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.button {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.2),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.2),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.1);
+
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+
+  text-transform: none;
+  text-decoration: none;
+
+  -webkit-appearance: button;
+
+  background-color: #f5f8fa;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsla(0, 0%, 100%, 0.8)),
+    to(hsla(0, 0%, 100%, 0))
+  );
+  background-image: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.8),
+    hsla(0, 0%, 100%, 0)
+  );
+  color: #182026;
+
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px 10px;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 12px;
+  min-width: 30px;
+  min-height: 20px;
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+
+  font: 400 11px system-ui;
+
+  text-decoration: none;
+}
+
+.button:hover {
+  background-clip: padding-box;
+  background-color: #ebf1f5;
+}
+.button:active,
+.buttonActive {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.2),
+    inset 0 1px 2px rgba(16, 22, 26, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.2),
+    inset 0 1px 2px rgba(16, 22, 26, 0.2);
+  background-color: #d8e1e8;
+  background-image: none;
+}
+
+.buttonBig {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+
+.button:disabled,
+.buttonDisabled {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: rgba(206, 217, 224, 0.5);
+  background-image: none;
+  cursor: not-allowed;
+  color: rgba(92, 112, 128, 0.6);
+}
+
+.buttonPrimary {
+  background-color: #137cbd;
+  background-image: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.1),
+    hsla(0, 0%, 100%, 0)
+  );
+  color: white;
+}
+
+.buttonPrimary:hover {
+  background-color: #106ba3;
+}
+
+.buttonPrimary.buttonDisabled,
+.buttonPrimary:disabled {
+  background-color: rgba(19, 124, 189, 0.5);
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.buttonPrimary.buttonActive,
+.buttonPrimary:active {
+  background-color: #0e5a8a;
+}
+
+.buttonDanger {
+  background-color: #db3737;
+  background-image: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.1),
+    hsla(0, 0%, 100%, 0)
+  );
+  color: white;
+}
+
+.buttonDanger:hover {
+  background-color: #c23030;
+}
+
+.buttonDanger.buttonDisabled,
+.buttonDanger:disabled {
+  background-color: rgba(219, 55, 55, 0.5);
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.buttonDanger.buttonActive,
+.buttonDanger:active {
+  background-color: #a82a2a;
+}
+
+.asyncButtonHidden {
+  overflow-y: hidden;
+  height: 0;
+}
+
+.asyncButtonMegaHidden {
+  display: none;
+}
+
+.asyncButtonContent {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ------- Harvested from ButtonBar.css -------- */
+
+.buttonBarContainer > button:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  margin-right: -1px;
+}
+
+.buttonBarContainer > button:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+/* ------- Harvested from ButtonGroup.css -------- */
+
+.buttonGroupContainer {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.buttonGroupContainerMerged > :not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.buttonGroupContainerMerged > :not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+
+.buttonGroupContainer:not(.buttonGroupContainerMerged) > * {
+  margin-bottom: 10px;
+}
+
+.buttonGroupContainer:not(.buttonGroupContainerMerged) > *:not(:first-child) {
+  margin-left: 10px;
+}
+
+.buttonGroupContainerMerged:not(.buttonGroupContainerNoBottomMargin) {
+  margin-bottom: 10px;
+}
+
+.buttonGroupContainerNoBottomMargin {
+  margin-bottom: 0;
+}
+/* ------- Harvested from ChallengeList.css -------- */
+
+.challengeListContainer {
+}
+/* ------- Harvested from Content.css -------- */
+
+.contentLine {
+  line-height: 2em;
+}
+
+.contentPosition {
+  background-color: #eee;
+  padding: 3px;
+  border: 1px solid black;
+  white-space: nowrap;
+}
+
+.contentPlayer {
+  font-weight: bold;
+}
+
+.contentPlayer0 {
+  color: gold;
+}
+
+.contentPlayer1 {
+  color: red;
+}
+
+.contentPlayer2 {
+  color: blue;
+}
+
+.contentUnitType {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+}
+
+.contentSelectInstruction {
+  color: inherit;
+}
+/* ------- Harvested from ExportBattle.css -------- */
+
+.exportBattleInstruction {
+}
+
+.exportBattleInputContainer {
+  text-align: center;
+  margin-top: 1em;
+}
+/* ------- Harvested from Flicker.css -------- */
+
+.flickerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  --flicker-size: 35px;
+}
+
+.flickerButton button {
+  height: var(--flicker-size);
+  width: var(--flicker-size);
+  border-radius: var(--flicker-size);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.flickerContent {
+  flex-grow: 1;
+  margin: 0 6px;
+}
+/* ------- Harvested from GamePage.css -------- */
+
+.centerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ------- Harvested from Icon.container.css -------- */
+
+.iconContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-origin: 50% 50%;
+}
+
+.iconContainerSelected {
+  animation-name: wag;
+  animation-duration: 0.85s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.iconContainerAvailable {
+  animation-name: pulsate;
+  animation-duration: 0.85s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wag {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.8, 0.8);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* ------- Harvested from Icon.inner.css -------- */
+
+.iconInner {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  transition: opacity 500ms ease, transform 500ms ease;
+  transform: scale(1, 1);
+  opacity: 1;
+  /* z-index: 2; */
+}
+
+.iconInnerDuringEnter {
+  opacity: 0;
+  /* z-index: 2; */
+  transform: scale(0.1, 0.1);
+}
+
+.iconInnerDuringExit {
+  opacity: 0;
+  /* z-index: 1; */
+  transform: scale(0.1, 0.1);
+}
+/* ------- Harvested from Input.css -------- */
+
+/* Styles mostly from Blueprint */
+
+.input:focus {
+  -webkit-box-shadow: 0 0 0 1px #137cbd, 0 0 0 3px rgba(19, 124, 189, 0.3),
+    inset 0 1px 1px rgba(16, 22, 26, 0.2);
+  box-shadow: 0 0 0 1px #137cbd, 0 0 0 3px rgba(19, 124, 189, 0.3),
+    inset 0 1px 1px rgba(16, 22, 26, 0.2);
+}
+
+.input:disabled {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: rgba(206, 217, 224, 0.5);
+  cursor: not-allowed;
+  color: rgba(92, 112, 128, 0.6);
+  resize: none;
+}
+
+.input {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 0 0 rgba(19, 124, 189, 0),
+    0 0 0 0 rgba(19, 124, 189, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15),
+    inset 0 1px 1px rgba(16, 22, 26, 0.2);
+  box-shadow: 0 0 0 0 rgba(19, 124, 189, 0), 0 0 0 0 rgba(19, 124, 189, 0),
+    inset 0 0 0 1px rgba(16, 22, 26, 0.15),
+    inset 0 1px 1px rgba(16, 22, 26, 0.2);
+  background: #fff;
+  height: 30px;
+  padding: 0 10px;
+  vertical-align: middle;
+  line-height: 30px;
+  color: #182026;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-transition: -webkit-box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+  transition: -webkit-box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+  transition: box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+  transition: box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9),
+    -webkit-box-shadow 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* ------- Harvested from InputButton.css -------- */
+
+.inputButton > :first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: -1px;
+}
+
+.inputButton > :last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 30px; /* Same as for Input */
+  z-index: -1;
+}
+/* ------- Harvested from Link.css -------- */
+
+.link {
+  text-decoration: none;
+}
+
+.linkNaked {
+  text-decoration: none;
+  color: inherit;
+}
+/* ------- Harvested from List.css -------- */
+
+.listItem {
+  margin-bottom: 10px;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listItem:hover {
+  background-color: #f7cb8c;
+}
+
+.listItemClickable:hover {
+  cursor: pointer;
+}
+
+.listItemPic {
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 80px;
+  width: 80px;
+}
+
+.listItemContent {
+  flex-grow: 1;
+  margin: 0 10px;
+  display: flex;
+  font-size: 12px;
+  flex-direction: column;
+}
+
+.listItemActions {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItemActions > :not(:first-child) {
+  margin-top: 8px;
+}
+
+.listItemTitle {
+  font-family: verdana;
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+/* ------- Harvested from Mark.css -------- */
+
+.mark {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pulsateMark {
+  animation-name: pulsate;
+  animation-duration: 0.85s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.7, 0.7);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* ------- Harvested from Markdown.css -------- */
+
+.markdownContainer > div:first-child > :first-child {
+  margin-top: 0;
+}
+
+.markdownContainer > div:last-child > :last-child {
+  margin-bottom: 0;
+}
+
+.markdownContainer {
+  margin-bottom: 1em;
+}
+
+.md-icon-svg {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+}
+
+.md-arr {
+}
+
+.md-img {
+  max-width: 100%;
+  position: relative;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.md-img > img {
+  max-width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.md-img-with-placeholder {
+  background-color: bisque;
+}
+
+.md-img-with-placeholder > img {
+  opacity: 0;
+}
+
+.md-img-info {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  text-align: right;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: verdana;
+  font-size: 10px;
+}
+
+.md-img-info a {
+  color: white !important;
+}
+
+.md-pos,
+.md-pos-with-unit {
+  background-color: #eee;
+  padding: 3px;
+  border: 1px solid black;
+  white-space: nowrap;
+}
+
+.md-plr {
+  font-weight: bold;
+}
+
+.md-plr-0 {
+  color: gold;
+}
+
+.md-plr-1 {
+  color: red;
+}
+
+.md-plr-2 {
+  color: blue;
+}
+
+.md-outcome {
+  font-weight: bold;
+}
+
+.md-2col,
+.md-3col {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.md-2col > * {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 49%;
+}
+
+.md-3col > * {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 32%;
+}
+
+.md-example {
+  background-color: #bbb;
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.md-example > :first-child {
+  margin-top: 0;
+}
+
+.md-example > :last-child {
+  margin-bottom: 0;
+}
+
+.md-setup {
+  text-align: center;
+}
+
+.md-setup > svg {
+  max-height: 280px;
+  max-width: 280px;
+}
+/* ------- Harvested from Modal.css -------- */
+
+.modalOverlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  height: 90%;
+  width: 90%;
+  max-width: calc(450px * 9 / 10); /* matching maxes from Page */
+  max-height: calc(800px * 9 / 10);
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+}
+
+.modalHeader {
+  background-color: burlywood;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.modalCloseButton {
+  background-color: lightcoral;
+  float: right;
+}
+
+.modalContent {
+  padding: 10px;
+  overflow: scroll;
+}
+
+.modalSubtitle {
+  font-size: 0.8em;
+  margin-right: 10px;
+}
+
+.modalTitle {
+}
+/* ------- Harvested from Nav.Bottom.css -------- */
+
+.navBottom {
+  transition: opacity 500ms ease, transform 500ms ease;
+  transform: scale(1, 1);
+  opacity: 1;
+  width: 100%;
+}
+
+.navBottomDuringEntering {
+  opacity: 0;
+}
+
+.navBottomDuringExiting {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  opacity: 0;
+}
+
+.navBottomFurther {
+  transform: translate3d(0, -40px, 0) scale(0.5, 0.5);
+}
+
+.navBottomNearer {
+  transform: translate3d(0, 40px, 0) scale(1.5, 1.5);
+}
+
+.navBottomDuringEntering.navBottomSame {
+  transform: translate3d(100px, 0, 0);
+}
+
+.navBottomSame {
+}
+
+.navBottomDuringExiting.navBottomSame {
+  transform: translate3d(-100px, 0, 0);
+}
+
+.navBottomHintContainer {
+  position: relative;
+  --hint-breadth: 11px;
+}
+
+.navBottomHint {
+  bottom: calc(-1 * var(--hint-breadth));
+  position: absolute;
+  width: 33px;
+  top: calc(-1 * var(--hint-breadth));
+  transform: scale(0.65, 0.65);
+}
+
+.navBottomBackHint {
+  transform-origin: right;
+  right: 0;
+}
+
+.navBottomShortcutHint {
+  transform-origin: left;
+  left: 0;
+}
+/* ------- Harvested from Nav.Hint.css -------- */
+
+.navHintShortcut,
+.navHintBack,
+.navHintYouAreHere,
+.navHintHome {
+  position: relative;
+  pointer-events: none;
+}
+
+.navHintShortcut:before,
+.navHintBack:before,
+.navHintYouAreHere:before,
+.navHintHome:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width: 36px;
+  line-height: 10px;
+  box-sizing: border-box;
+  padding: 0 4px;
+  border-radius: 20px;
+  background-color: rgb(119, 115, 115);
+  color: white;
+  font-size: 8px;
+  font-family: verdana;
+  position: absolute;
+  transform-origin: 50% 50%;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+.navHintYouAreHere:before {
+  content: "you are here";
+  background-color: red;
+  transform: rotate(20deg);
+  right: -30px;
+  top: 10px;
+}
+
+.navHintBack:before {
+  content: "go up one step";
+  transform: rotate(-20deg);
+  top: -15px;
+}
+
+.navHintHome:before {
+  right: -45px;
+  top: 0px;
+  content: "go back home";
+}
+
+.navHintShortcut:before {
+  right: 24px;
+  top: 6px;
+  transform: rotate(24deg);
+  content: "short-cut";
+}
+/* ------- Harvested from Nav.Step.css -------- */
+
+.navStep {
+  border: 1px solid blue;
+  background-color: rgb(210, 217, 231);
+  border-radius: 8px;
+  padding: 5px;
+  color: blue;
+  font-family: verdana;
+  text-align: center;
+  position: relative;
+}
+
+.navStep:not(.navStepCurrent) {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.navStepCurrent {
+  background-color: white;
+  border-width: 1px;
+  color: black;
+  border-color: black;
+}
+
+.navStep:not(.navStepCurrent):hover {
+  background-color: rgb(169, 184, 216);
+}
+
+.navStepTitle {
+  margin-top: 0;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navStepDesc {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.navStepLinkBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.navStepLinkEntry {
+  display: flex;
+  font-size: 0.8em;
+  align-items: center;
+}
+/* ------- Harvested from Nav.css -------- */
+
+.navContainer {
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.navFull.navContainer {
+  background-color: rgba(255, 255, 255, 0.9);
+  pointer-events: all;
+}
+
+.navNever .navRow:not(.navAlways) {
+  visibility: hidden;
+}
+
+.navRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBetweenRow {
+  min-height: 30px;
+  flex: 1;
+}
+
+.navRowStepContainer {
+  max-width: 40%;
+}
+
+.navLinkArrowRow {
+  min-height: 49px;
+}
+
+.navButton {
+  width: 75px;
+}
+
+.navButtonHighlight {
+  position: relative;
+}
+
+.navFull .navButtonHighlight:before {
+  animation-name: fadeout;
+}
+
+.navButtonHighlight:before {
+  position: absolute;
+  height: 180px;
+  width: 80px;
+  content: "Fun starts here!";
+  color: red;
+  text-align: center;
+  font-family: sans-serif;
+  bottom: 10px;
+  left: 10px;
+  background-image: url(/images/here.png);
+  z-index: 10;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.navNever .navButtonHighlight:before {
+  animation-delay: 0.5s; /* Delay before hint shows initially */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.navFiller {
+  flex: 1;
+}
+
+.navFlexLeft {
+  justify-content: flex-start;
+  display: flex;
+  align-items: stretch;
+}
+
+.navFlexRight {
+  justify-content: flex-end;
+  display: flex;
+  align-items: stretch;
+}
+
+.navButtonInner {
+  pointer-events: all;
+  padding: 0 3px;
+  border: 1px solid blue;
+  color: blue;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(210, 217, 231);
+  text-decoration: none;
+  text-align: center;
+  user-select: none;
+  font-family: verdana;
+  display: block;
+}
+
+.navButtonShortcut {
+  border-style: dashed;
+}
+
+.navSideButtonContainer,
+.navSideButtonContainer .navButton {
+  width: 35px;
+  min-width: 35px;
+}
+
+.navBackButtonContainer .navButton {
+  min-width: 25px;
+}
+
+.navButtonInner:hover {
+  background-color: rgb(169, 184, 216);
+}
+
+.navButtonInner:visited {
+  color: blue;
+}
+
+.navButtonActive {
+}
+.navButtonInner:active,
+.navButton.navButtonActive .navButtonInner {
+  background-color: blue;
+  color: white;
+}
+
+.navCompassBtnContainer {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  height: 21px;
+}
+
+.navMapButtonContainer {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.navBackButtonContainer {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.navCompassBtnContainer > .navButton,
+.navBackBtnContainer > .navButton {
+  height: 21px;
+}
+
+.navRow:not(.navAlways) {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navFull .navRow {
+  opacity: 1;
+}
+
+.navTopRow {
+  min-height: 21px;
+}
+
+.navMute {
+  pointer-events: none !important;
+  cursor: inherit;
+}
+
+.navShadeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background-color: sandybrown;
+}
+
+.navHomeBtnContainer {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 21px;
+  z-index: 5; /* to be above toprow */
+  opacity: 0;
+}
+
+.navContainer:not(.navFirst) .navHomeBtnContainer {
+  transition: opacity 0.3s ease;
+}
+
+.navHomeBtnContainer a {
+  pointer-events: none;
+  cursor: inherit;
+}
+
+.navHomeBtnContainer > * {
+  height: 21px;
+}
+
+.navWithCrumbs .navHomeBtnContainer {
+  opacity: 1;
+}
+
+.navWithCrumbs .navHomeBtnContainer a {
+  pointer-events: all;
+  cursor: pointer;
+}
+/* ------- Harvested from NewLocalSession.css -------- */
+
+.newLocalSession {
+  padding-top: 20px; /* or maybe Modal should have this padding at the top always? */
+  text-align: center;
+}
+
+.newLocalSessionDivider:after {
+  content: "";
+  height: 2em;
+  display: block;
+  line-height: 2em;
+  color: grey;
+}
+
+.newLocalSessionHeader {
+  margin-bottom: 1em;
+}
+
+.newLocalSessionTopInstruction {
+  margin-bottom: 2em;
+  display: inline-block;
+  padding: 3px;
+  background-color: lightblue;
+  border-radius: 3px;
+}
+/* ------- Harvested from NewRemoteSession.css -------- */
+
+.newRemoteSessionContainer {
+}
+
+.newRemoteSessionTopInstruction {
+  margin-bottom: 2em;
+  display: inline-block;
+  padding: 3px;
+  background-color: lightblue;
+  border-radius: 3px;
+}
+
+.newRemoteSessionForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 6px;
+  background-color: #ddd;
+  margin-bottom: 6px;
+}
+/* ------- Harvested from Page.css -------- */
+
+.pageContainer {
+  width: 100%;
+  height: calc(100% - 32px);
+  display: flex;
+  flex-direction: column;
+}
+
+.pageStrip {
+  background-color: sandybrown;
+  height: 2em;
+  display: flex;
+  padding: 0 5px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: verdana;
+}
+
+.pageStrip > span {
+  margin: 0 38px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.pageTop {
+  background-color: saddlebrown; /* should be same as board border */
+  flex-shrink: 0;
+  position: relative;
+}
+
+.pageBody {
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  position: relative;
+  min-height: 1px; /* otherwise flex-items uses content size as min-height  */
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.pageBody > * {
+  flex-grow: 1;
+}
+
+.pageContainer img {
+  max-width: 100%;
+}
+/* ------- Harvested from PayloadArticle.css -------- */
+
+.payloadArticleRelationHeader {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* ------- Harvested from PayloadArticleList.css -------- */
+
+.payloadArticleList {
+  padding-left: 0;
+}
+/* ------- Harvested from PayloadArticleListPage.css -------- */
+
+.payloadArticleListPageTitle {
+  margin-top: 0;
+}
+/* ------- Harvested from PayloadArticlePage.css -------- */
+
+.payloadArticlePageTitle {
+  margin-top: 0;
+}
+/* ------- Harvested from RadioSelector.css -------- */
+
+.radioSelectorLabel {
+  display: block;
+}
+
+.radioSelectorInnerDiv {
+  display: inline-block;
+  text-align: left;
+}
+
+.radioSelectorTitle {
+}
+/* ------- Harvested from ScrollBox.css -------- */
+
+.scrollBoxContainer {
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.scrollBoxContent {
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+/* ------- Harvested from SessionList.css -------- */
+
+.sessionListInstruction {
+  margin-bottom: 1em;
+}
+
+.sessionListFullError {
+  padding: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+.sessionListItemErrorInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: red;
+  height: 100%;
+}
+
+.sessionListEmpty {
+  text-align: center;
+  margin: 0 20px;
+  font-style: italic;
+  color: gray;
+  font-size: 12px;
+}
+
+.sessionListInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left; /* because LocalSession parent has text-align center */
+  font-size: 12px;
+}
+/* ------- Harvested from Shell.css -------- */
+
+body,
+#__next {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #9f9382;
+}
+
+body.sb-show-main #root {
+  /* for Storybook */
+  background-color: white;
+}
+
+.shellContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.hideDuringFullNav {
+  transition: opacity 0.3s ease;
+}
+
+.shellContainerWithFullNav .hideDuringFullNav {
+  opacity: 0;
+}
+
+.shellNav {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+@media (min-width: 450px) {
+  .shellContainer {
+    width: 450px;
+    max-height: 800px;
+  }
+}
+/* ------- Harvested from Stepper.css -------- */
+
+.stepperRange {
+  width: 100%;
+}
+/* ------- Harvested from Switch.css -------- */
+
+.switchContainer {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  text-transform: none;
+  padding-left: 38px;
+
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Open Sans, Helvetica Neue, Icons16, sans-serif;
+  line-height: 1.28581;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #182026;
+}
+
+.switchContainer input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.switchIndicator {
+  display: inline-block;
+  position: relative;
+  margin-top: -3px;
+  margin-right: 10px;
+  border: none;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.2),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.2),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.1);
+  background-clip: padding-box;
+  background-color: #f5f8fa;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsla(0, 0%, 100%, 0.8)),
+    to(hsla(0, 0%, 100%, 0))
+  );
+  background-image: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.8),
+    hsla(0, 0%, 100%, 0)
+  );
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  margin-left: -38px;
+  background: rgba(167, 182, 194, 0.5);
+  border: none;
+  border-radius: 1.75em;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  width: auto;
+  min-width: 1.75em;
+  -webkit-transition: background-color 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+  transition: background-color 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+}
+
+.switchContainer input:checked ~ .switchIndicator {
+  background: #137cbd;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.4),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.4),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.2);
+  background-color: #137cbd;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsla(0, 0%, 100%, 0.1)),
+    to(hsla(0, 0%, 100%, 0))
+  );
+  background-image: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.1),
+    hsla(0, 0%, 100%, 0)
+  );
+  color: #fff;
+}
+
+.switchIndicator:before {
+  box-sizing: inherit;
+  position: absolute;
+  left: 0;
+  margin: 2px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.2), 0 1px 1px rgba(16, 22, 26, 0.2);
+  background: #fff;
+  width: calc(1em - 4px);
+  height: calc(1em - 4px);
+  transition: left 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+}
+
+.switchContainer input:checked ~ .switchIndicator:before {
+  left: calc(100% - 1em);
+}
+/* ------- Harvested from TabBar.css -------- */
+
+.tabBarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  position: relative;
+  margin: 0;
+  border: none;
+  padding: 0;
+  list-style: none;
+}
+
+.tabBarTab {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  cursor: pointer;
+  line-height: 22px;
+  color: #182026;
+  font-size: 12px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid black;
+  border-bottom: none;
+  padding: 0 5px;
+  background-color: blanchedalmond;
+  margin: 0 3px;
+
+  font-weight: 400;
+  color: #182026;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Open Sans, Helvetica Neue, Icons16, sans-serif;
+}
+
+.tabBarTab:hover:not(.tabBarTabSelected) {
+  background-color: #eee;
+}
+
+.tabBarTab:not(:last-child) {
+  margin-right: -1px;
+}
+
+.tabBarTabSelected {
+  background-color: white;
+  border-bottom: none;
+  line-height: 24px;
+}
+/* ------- Harvested from TitlePage.css -------- */
+
+.titlePageStrip {
+  text-align: center;
+  width: 100%;
+}
+
+.titlePageBodyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.titlePageBodyContainer:after {
+  content: "";
+  height: 20px;
+  flex-shrink: 10;
+}
+
+.titlePageBoardBox {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.titlePageBoardWelcome {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlePageLogo {
+  width: 235px;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.titlePageWelcomeRow {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* to make text and button on the same line */
+  font-size: 11px;
+  font-family: system-ui;
+}
